@@ -75,7 +75,7 @@ public class EditItemsDialogFragment extends DialogFragment {
             AddBtn.setOnClickListener(edit -> editItem(diaryModel,TitleTv.getText().toString(),
                     DetailsTv.getText().toString(),this.position));
         }else {
-            AddBtn.setText("Add New Item");
+            AddBtn.setText(String.valueOf("Add New Item"));
             AddBtn.setOnClickListener(add -> addNewItem(TitleTv.getText().toString(),
                     DetailsTv.getText().toString()));
         }
@@ -86,6 +86,7 @@ public class EditItemsDialogFragment extends DialogFragment {
     @Override
     public void onAttach(Context context){
         super.onAttach(context);
+        //check if interface is implemented in hosted activity
         if(context instanceof OnButtonClickedInterface){
             onButtonClickedInterface = (OnButtonClickedInterface) context;
         } else throw new RuntimeException("Must implement interface in calling object");
