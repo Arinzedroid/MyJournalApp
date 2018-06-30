@@ -21,6 +21,8 @@
         <TextView
             android:id="@+id/date_text"
             tools:text="20th June 2018"
+            android:layout_toEndOf="@+id/title_text"
+            android:gravity="end"
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
