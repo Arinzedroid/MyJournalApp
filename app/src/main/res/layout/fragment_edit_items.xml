@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layoutBackground"
+    tools:context=".EditItemsDialogFragment">
+
+    <EditText
+        android:id="@+id/diary_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="Title"
+        android:inputType="textCapWords"
+        android:padding="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/appTextColor"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/details"
+        android:gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/diary_title"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:hint="Details"
+        android:inputType="textMultiLine|textLongMessage|textCapSentences"
+        android:padding="10dp"
+        android:singleLine="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/appTextColor" />
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/details"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/textColor"
+        android:text="Save Item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
